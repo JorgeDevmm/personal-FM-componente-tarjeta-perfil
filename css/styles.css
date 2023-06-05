@@ -1,5 +1,134 @@
 :root {
-  --color-Fondo: ;
+  --DarkCyan: hsl(185, 75%, 39%);
+  --DarkGrayishBlue: hsl(227, 10%, 46%);
+  --VeryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+  --DarkGray: hsl(0, 0%, 59%);
+  --fontPrimary: 'Kumbh Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--fontPrimary);
+}
+
+body {
+  background-color: var(--DarkCyan);
+  position: relative;
+}
+
+.bg-pattern-top {
+  position: absolute;
+  top: -733.5px;
+  left: -733.5px;
+  width: 978px;
+  height: 978px;
+  z-index: 1;
+}
+
+@media (min-width: 375px) {
+  .bg-pattern-top {
+    top: -489px;
+    left: -489px;
+  }
+}
+
+.bg-pattern-bottom {
+  position: absolute;
+  bottom: -733.5px;
+  right: -733.5px;
+  width: 978px;
+  height: 978px;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
+@media (min-width: 375px) {
+  .bg-pattern-bottom {
+    bottom: -489px;
+    right: -489px;
+  }
+}
+
+.contenedor {
+  width: 95%;
+  max-width: 350px;
+  margin: 200px auto;
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  border-radius: 10px;
+  width: 350px;
+  background-color: #fff;
+}
+
+.card__imagen {
+  background-image: url(../assets/images/bg-pattern-card.svg);
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  position: relative;
+  height: 140px;
+}
+
+.card__img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  position: relative;
+  bottom: -92px;
+  left: calc(50% - 48px);
+}
+
+.card__contenido {
+}
+
+.card__descripcion {
+  border-bottom: 1px solid var(--DarkGray);
+}
+
+.card__heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 70px;
+  text-align: center;
+  color: var(--VeryDarkDesaturatedBlue);
+}
+
+.card__heading--span {
+  color: var(--DarkGrayishBlue);
+  font-weight: 400;
+}
+
+.card__texto {
+  text-align: center;
+  color: var(--DarkGrayishBlue);
+  margin-bottom: 30px;
+}
+
+.metricas {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.metricas__item {
+  text-align: center;
+  padding: 30px;
+}
+
+.metricas__heading {
+  font-size: 18px;
+  color: var(--VeryDarkDesaturatedBlue);
+  font-weight: bold;
+}
+.metricas__descripcion {
+  color: var(--DarkGrayishBlue);
+  font-size: 10px;
+  letter-spacing: 2px;
 }
 
 .attribution {
