@@ -63,7 +63,6 @@ body {
   margin: 200px auto;
   position: relative;
   z-index: 2;
-  background-color: red;
   display: flex;
   justify-content: center;
   align-items: center;
