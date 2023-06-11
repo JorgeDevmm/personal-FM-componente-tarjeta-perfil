@@ -4,6 +4,7 @@
   --VeryDarkDesaturatedBlue: hsl(229, 23%, 23%);
   --DarkGray: hsl(0, 0%, 59%);
   --fontPrimary: 'Kumbh Sans', sans-serif;
+  --blanco: rgba(255, 255, 255, 0.5);
 }
 
 * {
@@ -12,51 +13,60 @@
   padding: 0;
   font-family: var(--fontPrimary);
 }
+/*  */
 
 body {
   background-color: var(--DarkCyan);
-  position: relative;
+  overflow: hidden;
 }
 
 .bg-pattern-top {
   position: absolute;
-  top: -733.5px;
-  left: -733.5px;
-  width: 978px;
-  height: 978px;
+  width: 489px;
+  height: 489px;
+  top: -244.5px;
+  left: -244.5px;
   z-index: 1;
 }
 
-@media (min-width: 375px) {
+@media (min-width: 480px) {
   .bg-pattern-top {
+    width: 978px;
+    height: 978px;
     top: -489px;
-    left: -489px;
+    left: -244.5px;
   }
 }
 
 .bg-pattern-bottom {
   position: absolute;
-  bottom: -733.5px;
-  right: -733.5px;
-  width: 978px;
-  height: 978px;
+  width: 489px;
+  height: 489px;
+  bottom: -244.5px;
+  right: -244.5px;
   z-index: 1;
-  overflow-x: hidden;
 }
 
-@media (min-width: 375px) {
+@media (min-width: 480px) {
   .bg-pattern-bottom {
+    width: 978px;
+    height: 978px;
     bottom: -489px;
-    right: -489px;
+    right: -244.5px;
   }
 }
 
 .contenedor {
   width: 95%;
-  max-width: 350px;
+  max-width: 800px;
+  height: 500px;
   margin: 200px auto;
   position: relative;
   z-index: 2;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
@@ -132,8 +142,9 @@ body {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 12px;
   text-align: center;
+  font-weight: 700;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
